@@ -692,6 +692,7 @@ endif()
 string(REPLACE ";" "," LIBIIO_SCAN_BACKENDS "${LIBIIO_SCAN_BACKENDS}")
 
 configure_file(iio-config.h.cmakein ${CMAKE_CURRENT_BINARY_DIR}/iio-config.h @ONLY)
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 toggle_iio_feature("${NO_THREADS}" threadless)
 toggle_iio_feature("${LIBIIO_COMPAT}" compat)
